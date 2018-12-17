@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Logic%20Gate%20Computer.css">
+    <meta charset="UTF-8">
+    <title>Logic Gate</title>
+    <script>
+        function calculate(){
+            if (document.getElementById('AND').checked){
+                if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "0";
+                }else if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 1){
+                    document.getElementById('output').innerHTML = "0";
+                }else if (((document.getElementById('first').value =="A") == 1)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "0";
+                }else{
+                    document.getElementById('output').innerHTML = "1";
+                }
+            }
+            if (document.getElementById('OR').checked){
+                if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "0";
+                }else if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 1){
+                    document.getElementById('output').innerHTML = "1";
+                }else if (((document.getElementById('first').value =="A") == 1)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "1";
+                }else{
+                    document.getElementById('output').innerHTML = "1";
+                }
+            }
+            if (document.getElementById('XOR').checked){
+                if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "0";
+                }else if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 1){
+                    document.getElementById('output').innerHTML = "1";
+                }else if (((document.getElementById('first').value =="A") == 1)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "1";
+                }else{
+                    document.getElementById('output').innerHTML = "0";
+                }
+            }
+            if (document.getElementById('NAND').checked){
+                if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "1";
+                }else if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 1){
+                    document.getElementById('output').innerHTML = "1";
+                }else if (((document.getElementById('first').value =="A") == 1)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "1";
+                }else{
+                    document.getElementById('output').innerHTML = "0";
+                }
+            }
+            if (document.getElementById('NOR').checked){
+                if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "1";
+                }else if (((document.getElementById('first').value =="A") == 0)&&(document.getElementById('second').value == "A") == 1){
+                    document.getElementById('output').innerHTML = "0";
+                }else if (((document.getElementById('first').value =="A") == 1)&&(document.getElementById('second').value == "A") == 0){
+                    document.getElementById('output').innerHTML = "0";
+                }else{
+                    document.getElementById('output').innerHTML = "0";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<h1 id="title"><b>Logic Gate Computer</b></h1>
+
+<form>
+    <input type="radio" name="gate" id="AND" value="AND"> AND Gate<br>
+    <input type="radio" name="gate" id="OR" value="OR"> OR Gate<br>
+    <input type="radio" name="gate" id="XOR" value="XOR"> XOR Gate<br>
+    <input type="radio" name="gate" id="NAND" value="NAND"> NAND Gate<br>
+    <input type="radio" name="gate" id="NOR" value="NOR"> NOR Gate<br>
+</form>
+<p>Select inputs</p>
+    <select id="first">
+        <option value="A">1</option>
+        <option value="B">0</option>
+    </select>
+    <select id="second">
+        <option value="A">1</option>
+        <option value="B">0</option>
+    </select> <br>
+
+<button onclick="calculate()">Submit</button>
+    <p>OUTPUT<div id ="output"></div></p>
+<script>
+    if (document.getElementById('AND').checked){
+        
+    } 
+</script>
+<div class="Gate"><img src="https://www.autodesk.com/products/eagle/blog/wp-content/uploads/2017/05/Logic-gate-and-us.svg_.png" alt="AND Gate"></div>
+<div class="Gate"><img src="https://www.autodesk.com/products/eagle/blog/wp-content/uploads/2017/05/Or-gate-en.svg_.png" alt="OR Gate"></div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+p{
+    font-family: Arial;
+    font-size: medium;
+}
+#title{
+    font-family: Courier New;
+}
+.Gate{
+    width: 500px;
+    height: 200px;
+}
